@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>Anketa</title>
+  </head>
+  <body>
+
+<script>
+
+SNameV ();
+
+VOldV ();
+
+var Dold=(Old*360);
+
+var Five=(Number(Old)+5);
+
+var Gender=confirm('Ваш пол - мужской?');
+ if (Gender)
+   var Pol=' мужской';
+ else
+   var Pol=' женский';
+
+if (Gender==true&&Old>=60||Gender==false&&Old>=55)
+  var Pension=' да';
+else
+  var Pension= ' нет';
+
+alert('ваше ФИО: ' + Sname + ' ' + Name + ' ' + Pname + '\nваш возраст в годах: ' + Old + '\nваш возраст в днях: ' + Dold + '\nчерез 5 лет вам будет: ' + Five 
+        + '\nваш пол: ' + Pol + '\nвы на пенсии: ' + Pension );
+
+		
+// FUNCTIONS	
+
+function VOldV () 
+{
+ while(true)
+ {
+ Old=prompt('Ваш возраст: ');
+if (Old===null) {
+alert('Заполните поле!');
+continue;
+}
+if (Old.length<1) {
+alert('Заполните поле!');
+continue;
+}
+
+if (Old.replace (/\d/g, '').length){
+alert('Поле должно содержать только цифры!');
+continue;
+}
+break;
+}
+}
+
+function SNameV()
+{
+
+  while ( true )
+  {
+     Sname=prompt('Введите фамилию: ');
+    if (Sname===null) {
+      alert('Заполните поле!');
+      continue;
+    }
+    if (Sname.length<2) {
+      alert('Поле должно иметь минимум 2 символа!');
+      continue;
+    }
+    break;
+  }
+
+    while ( true )
+  {
+     Name=prompt('Введите имя: ');
+    if (Name===null) {
+      alert('Заполните поле!');
+      continue;
+    }
+    if (Name.length<2) {
+      alert('Поле должно иметь минимум 2 символа!');
+      continue;
+    }
+    break;
+  }
+  
+    while ( true )
+  {
+     Pname=prompt('Введите отчество: ');
+    if (Pname===null) {
+      alert('Заполните поле!');
+      continue;
+    }
+    if (Pname.length<2) {
+      alert('Поле должно иметь минимум 2 символа!');
+      continue;
+    }
+    break;
+  }
+  
+}
+	
+
+</script>
+
+  </body>
+</html>
+
